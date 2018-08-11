@@ -6,10 +6,13 @@
 #when you are testing below enter mbox-short.txt as the file name.
 fname - input("input a file name")
 fh = open(fname)
+# define var to calculate avg
 cn = 0
 tot = 0
+#loop to read particular lines and extract numbers from the line
 for line in fh:
     if not line.startswith("X-DSPAM-Confidence:") : continue
+    #extract numbers from the whole sentence then transform txt into float numbers
     num=float(line[line.find(':')+1:])
     cn = cn + 1
     tot = num + tot
