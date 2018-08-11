@@ -10,7 +10,7 @@ lst = list()
 for line in fh:
     line = line.rstrip().split()
     for word in line:
-        if word in lst: continue
+        if word in lst: continue #remove duplicate words
         lst.append(word)
 lst.sort()
 print(lst)
