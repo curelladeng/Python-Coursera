@@ -16,10 +16,10 @@ for line in handle:
   counts[email] = counts.get(email,0) + 1 #get email as dict key, give value 0 then plus 1 to start counting
                                           # if key doesn't exist, return 0 as default
 
-maxmail = none
+maxmail = None
 ct = 0
 for email, value in counts.items(): #items() returns a list of dict of (key, value)
-  if value is none or value > ct:
+  if value is None or value > ct:
     maxemail = email
     ct = value
 print(maxemail, ct)
