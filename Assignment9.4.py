@@ -14,6 +14,7 @@ for line in handle:
   if not line.startswith('From '): continue
   email = line.split()[1]
   counts[email] = counts.get(email,0) + 1 #get email as dict key, give value 0 then plus 1 to start counting
+                                          # if key doesn't exist, return 0 as default
 
 maxmail = none
 ct = 0
